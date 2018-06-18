@@ -37,7 +37,7 @@ module.exports = {
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: '#222',
+    backgroundColor: '#302d2f',
 
     // terminal selection color
     selectionColor: 'rgba(248,28,229,0.3)',
@@ -67,7 +67,7 @@ module.exports = {
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
     colors: {
-      black: '#000',
+      black: '#222',
       red: '#ff7c7c',
       green: '#4ff27d',
       yellow: '#e4f24f',
