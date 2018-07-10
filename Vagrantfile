@@ -25,6 +25,9 @@ Vagrant.configure('2') do |config|
   # via 127.0.0.1 to disable public access
   # config.vm.network 'forwarded_port', guest: 80, host: 8080, host_ip: '127.0.0.1'
 
+  # Forwards ssh credentials from host to vagrant box
+  config.ssh.forward_agent = true
+
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   config.vm.network 'private_network', ip: '55.55.55.5'
@@ -86,5 +89,6 @@ Vagrant.configure('2') do |config|
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
     echo 'deb https://dl.yarnpkg.com/debian/ stable main' | sudo tee /etc/apt/sources.list.d/yarn.list
     sudo apt-get update && sudo apt-get install yarn
+
   SHELL
 end
